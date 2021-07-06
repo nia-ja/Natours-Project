@@ -1,0 +1,23 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "Landing page for Natours",
+  "main": "index.js",
+  "scripts": { 
+    "sass": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nia-ja/Natours-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nia-ja/Natours-Project/issues"
+  },
+  "homepage": "https://github.com/nia-ja/Natours-Project#readme",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  }
+}
