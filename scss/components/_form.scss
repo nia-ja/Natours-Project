@@ -3,6 +3,7 @@
     margin-bottom: 2rem;
   }
 
+  // Input fields
   &__input {
     font-size: 1.5rem;
     font-family: inherit;
@@ -14,6 +15,7 @@
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
+    transition: all 0.3s;
 
     &:focus {
       outline: none;
@@ -31,7 +33,6 @@
   }
 
   &__label {
-    // font-family: inherit;
     font-size: 1.2rem;
     font-weight: 700;
     margin-left: 2rem;
@@ -44,5 +45,56 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
+  }
+
+  // Radio buttons
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+
+  // Hide original radio button
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.5rem;
+  }
+
+  // Custom radio button
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -0.4rem;
+
+    // Dot inside custom radio button (basic styles)
+    &::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  // Show "checked" state for custom radio button
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
   }
 }
